@@ -109,7 +109,7 @@
       </sensor>
     </link>
     <link name="led_0">
-      <light name="led_rear_outside" type="spot">
+      <light name="led_0" type="spot">
         <cast_shadows>false</cast_shadows>
         <visualize>0</visualize>
         <diffuse>1.0 1.0 1.0</diffuse>
@@ -134,7 +134,7 @@
           <izz>0.000000000001</izz>
         </inertia>
       </inertial>
-      <visual name="led_rear_outside_visual">
+      <visual name="led_0">
         <pose>0 0 0 0 0 0</pose>
         <cast_shadows>false</cast_shadows>
         <geometry>
