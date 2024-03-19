@@ -150,7 +150,7 @@
       </visual>
     </link>
     <link name="led_1">
-      <light name="led_rear_center" type="spot">
+      <light name="led_1" type="spot">
         <cast_shadows>false</cast_shadows>
         <visualize>0</visualize>
         <diffuse>1.0 1.0 1.0</diffuse>
@@ -175,7 +175,7 @@
           <izz>0.000000000001</izz>
         </inertia>
       </inertial>
-      <visual name="led_rear_center_visual">
+      <visual name="led_1">
         <pose>0 0 0 0 0 0</pose>
         <cast_shadows>false</cast_shadows>
         <geometry>
@@ -191,7 +191,7 @@
       </visual>
     </link>
     <link name="led_2">
-      <light name="led_rear_inside" type="spot">
+      <light name="led_2" type="spot">
         <cast_shadows>false</cast_shadows>
         <visualize>0</visualize>
         <diffuse>1.0 1.0 1.0</diffuse>
@@ -216,7 +216,7 @@
           <izz>0.000000000001</izz>
         </inertia>
       </inertial>
-      <visual name="led_rear_inside_visual">
+      <visual name="led_2">
         <pose>0 0 0 0 0 0</pose>
         <cast_shadows>false</cast_shadows>
         <geometry>
@@ -232,7 +232,7 @@
       </visual>
     </link>
     <link name="led_3">
-      <light name="led_rear_inside" type="spot">
+      <light name="led_3" type="spot">
         <cast_shadows>false</cast_shadows>
         <visualize>0</visualize>
         <diffuse>1.0 1.0 1.0</diffuse>
@@ -257,7 +257,7 @@
           <izz>0.000000000001</izz>
         </inertia>
       </inertial>
-      <visual name="led_rear_inside_visual">
+      <visual name="led_3">
         <pose>0 0 0 0 0 0</pose>
         <cast_shadows>false</cast_shadows>
         <geometry>
@@ -273,7 +273,7 @@
       </visual>
     </link>
     <link name="led_4">
-      <light name="led_rear_center" type="spot">
+      <light name="led_4" type="spot">
         <cast_shadows>false</cast_shadows>
         <visualize>0</visualize>
         <diffuse>1.0 1.0 1.0</diffuse>
@@ -298,7 +298,7 @@
           <izz>0.000000000001</izz>
         </inertia>
       </inertial>
-      <visual name="led_rear_center_visual">
+      <visual name="led_4">
         <pose>0 0 0 0 0 0</pose>
         <cast_shadows>false</cast_shadows>
         <geometry>
@@ -314,7 +314,7 @@
       </visual>
     </link>
     <link name="led_5">
-      <light name="led_rear_outside" type="spot">
+      <light name="led_5" type="spot">
         <cast_shadows>false</cast_shadows>
         <visualize>0</visualize>
         <diffuse>1.0 1.0 1.0</diffuse>
@@ -339,7 +339,7 @@
           <izz>0.000000000001</izz>
         </inertia>
       </inertial>
-      <visual name="led_rear_outside_visual">
+      <visual name="led_5">
         <pose>0 0 0 0 0 0</pose>
         <cast_shadows>false</cast_shadows>
         <geometry>
@@ -356,7 +356,7 @@
     </link>
 
     <link name="led_6">
-      <light name="led_front" type="spot">
+      <light name="led_6" type="spot">
         <cast_shadows>false</cast_shadows>
         <visualize>0</visualize>
         <diffuse>1.0 1.0 1.0</diffuse>
@@ -381,7 +381,7 @@
           <izz>0.000000000001</izz>
         </inertia>
       </inertial>
-      <visual name="led_front_visual">
+      <visual name="led_6">
         <pose>0 0 0 0 0 0</pose>
         <cast_shadows>false</cast_shadows>
         <geometry>
@@ -397,7 +397,7 @@
       </visual>
     </link>
     <link name="led_7">
-      <light name="led_front" type="spot">
+      <light name="led_7" type="spot">
         <cast_shadows>false</cast_shadows>
         <visualize>0</visualize>
         <diffuse>1.0 1.0 1.0</diffuse>
@@ -422,7 +422,7 @@
           <izz>0.000000000001</izz>
         </inertia>
       </inertial>
-      <visual name="led_front_visual">
+      <visual name="led_7">
         <pose>0 0 0 0 0 0</pose>
         <cast_shadows>false</cast_shadows>
         <geometry>
@@ -438,7 +438,7 @@
       </visual>
     </link>
     <link name="led_8">
-      <light name="led_front" type="spot">
+      <light name="led_8" type="spot">
         <cast_shadows>false</cast_shadows>
         <visualize>0</visualize>
         <diffuse>1.0 1.0 1.0</diffuse>
@@ -463,7 +463,7 @@
           <izz>0.000000000001</izz>
         </inertia>
       </inertial>
-      <visual name="led_front_visual">
+      <visual name="led_8">
         <cast_shadows>false</cast_shadows>
         <geometry>
           <sphere>
@@ -478,7 +478,7 @@
       </visual>
     </link>
     <link name="led_9">
-      <light name="led_front" type="spot">
+      <light name="led_9" type="spot">
         <cast_shadows>false</cast_shadows>
         <visualize>0</visualize>
         <diffuse>1.0 1.0 1.0</diffuse>
@@ -503,7 +503,7 @@
           <izz>0.000000000001</izz>
         </inertia>
       </inertial>
-      <visual name="led_front_visual">
+      <visual name="led_9">
         <cast_shadows>false</cast_shadows>
         <geometry>
           <sphere>
@@ -518,7 +518,7 @@
       </visual>
     </link>
     <link name="led_10">
-      <light name="led_front" type="spot">
+      <light name="led_10" type="spot">
         <cast_shadows>false</cast_shadows>
         <visualize>0</visualize>
         <diffuse>1.0 1.0 1.0</diffuse>
@@ -543,7 +543,7 @@
           <izz>0.000000000001</izz>
         </inertia>
       </inertial>
-      <visual name="led_front_visual">
+      <visual name="led_10">
         <pose>0 0 0 0 0 0</pose>
         <cast_shadows>false</cast_shadows>
         <geometry>
@@ -559,7 +559,7 @@
       </visual>
     </link>
     <link name="led_11">
-      <light name="led_front" type="spot">
+      <light name="led_11" type="spot">
         <cast_shadows>false</cast_shadows>
         <visualize>0</visualize>
         <diffuse>1.0 1.0 1.0</diffuse>
@@ -584,7 +584,7 @@
           <izz>0.000000000001</izz>
         </inertia>
       </inertial>
-      <visual name="led_front_visual">
+      <visual name="led_11">
         <pose>0 0 0 0 0 0</pose>
         <cast_shadows>false</cast_shadows>
         <geometry>
