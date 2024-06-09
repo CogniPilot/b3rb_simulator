@@ -19,7 +19,7 @@ ARGUMENTS = [
         description='z position'),
     DeclareLaunchArgument('yaw', default_value=['0'],
         description='yaw position'),
-    DeclareLaunchArgument('electrode', default_value='false',
+    DeclareLaunchArgument('electrode', default_value='true',
         choices=['true', 'false'],
         description='enable electrode'),
     DeclareLaunchArgument('sync', default_value='false',
@@ -233,7 +233,7 @@ def generate_launch_description():
         condition=IfCondition(LaunchConfiguration('electrode')),
         launch_arguments=[('rviz2', 'true'),
                           ('foxglove', 'false'),
-                          ('vehicle', 'rdd2'),
+                          ('vehicle', 'b3rb'),
                           ('sim', LaunchConfiguration('use_sim_time')),
                           ('joy', 'true'),
                         ])
