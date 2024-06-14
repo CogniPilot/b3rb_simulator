@@ -22,6 +22,10 @@ ARGUMENTS = [
     DeclareLaunchArgument('electrode', default_value='true',
         choices=['true', 'false'],
         description='enable electrode'),
+    DeclareLaunchArgument('controller',
+        default_value='f310',
+        choices=['f310', 'ps4'],
+        description='which controller you are using'),
     DeclareLaunchArgument('sync', default_value='false',
                           choices=['true', 'false'],
                           description='Run async or sync SLAM'),
@@ -216,7 +220,6 @@ def generate_launch_description():
                 'b3rb_nav2'), 'maps', LaunchConfiguration('map_yaml')]))])
 
     odom_to_tf = Node(
-        condition=IfCondition(LaunchConfiguration('corti')),
         package='corti',
         executable='odom_to_tf',
         output='screen',
@@ -232,6 +235,7 @@ def generate_launch_description():
             [get_package_share_directory('electrode'), 'launch', 'electrode.launch.py'])]),
         condition=IfCondition(LaunchConfiguration('electrode')),
         launch_arguments=[('rviz2', 'true'),
+                          ('controller', LaunchConfiguration('controller')),
                           ('foxglove', 'false'),
                           ('vehicle', 'b3rb'),
                           ('sim', LaunchConfiguration('use_sim_time')),
