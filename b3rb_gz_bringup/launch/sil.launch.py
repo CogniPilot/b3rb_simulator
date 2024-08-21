@@ -26,12 +26,6 @@ ARGUMENTS = [
         default_value='f310',
         choices=['f310', 'ps4'],
         description='which controller you are using'),
-    DeclareLaunchArgument('sync', default_value='false',
-                          choices=['true', 'false'],
-                          description='Run async or sync SLAM'),
-    DeclareLaunchArgument('localization', default_value='slam',
-                          choices=['off', 'localization', 'slam'],
-                          description='Whether to run localization or SLAM'),
     DeclareLaunchArgument('nav2', default_value='true',
                           choices=['true', 'false'],
                           description='Run nav2'),
@@ -194,7 +188,8 @@ def generate_launch_description():
         [get_package_share_directory(
         'b3rb_nav2'), 'launch', 'nav2.launch.py'])]),
         condition=IfCondition(LaunchConfiguration('nav2')),
-        launch_arguments=[('use_sim_time', LaunchConfiguration('use_sim_time'))])
+        launch_arguments=[('use_sim_time', LaunchConfiguration('use_sim_time')),
+                        ('map_yaml', LaunchConfiguration('map_yaml'))])
 
     corti = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([PathJoinSubstitution(
@@ -202,22 +197,6 @@ def generate_launch_description():
         condition=IfCondition(LaunchConfiguration('corti')),
         launch_arguments=[('use_sim_time', LaunchConfiguration('use_sim_time'))])
 
-    slam = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource([PathJoinSubstitution(
-        [get_package_share_directory(
-        'b3rb_nav2'), 'launch', 'slam.launch.py'])]),
-        condition=LaunchConfigurationEquals('localization', 'slam'),
-        launch_arguments=[('use_sim_time', LaunchConfiguration('use_sim_time')),
-            ('sync', LaunchConfiguration('sync'))])
-
-    localization = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource([PathJoinSubstitution(
-        [get_package_share_directory(
-        'b3rb_nav2'), 'launch', 'localization.launch.py'])]),
-        condition=LaunchConfigurationEquals('localization', 'localization'),
-        launch_arguments=[('use_sim_time', LaunchConfiguration('use_sim_time')),
-            ('map', PathJoinSubstitution([get_package_share_directory(
-                'b3rb_nav2'), 'maps', LaunchConfiguration('map_yaml')]))])
 
     odom_to_tf = Node(
         package='corti',
@@ -256,8 +235,6 @@ def generate_launch_description():
         spawn_robot,
         nav2,
         corti,
-        slam,
-        localization,
         odom_to_tf,
         electrode
     ])
